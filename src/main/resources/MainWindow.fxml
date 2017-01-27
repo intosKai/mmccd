@@ -7,9 +7,9 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.podder.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.podder.Controller">
    <children>
-      <Button fx:id="btnSetFolder" layoutX="21.0" layoutY="24.0" mnemonicParsing="false" onAction="#onSetFolderAction" prefHeight="25.0" prefWidth="90.0" text="Set folder" />
+      <Button fx:id="btnSetFolder" disable="true" layoutX="21.0" layoutY="24.0" mnemonicParsing="false" onAction="#onSetFolderAction" prefHeight="25.0" prefWidth="90.0" text="Set folder" />
       <CheckBox fx:id="cbMultiMonitors" layoutX="21.0" layoutY="124.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Multi Monitors" />
       <CheckBox fx:id="cbTripleHead" layoutX="21.0" layoutY="100.0" mnemonicParsing="false" text="Triple Head" />
       <Label fx:id="lbStatus" layoutX="387.0" layoutY="28.0" text="STATUS:" textFill="RED" />

@@ -16,7 +16,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         this.stage = primaryStage;
         try {
-            pane = FXMLLoader.load(Main.class.getResource("MainWindow.fxml"));
+            pane = FXMLLoader.load(this.getClass().getClassLoader().getResource("MainWindow.fxml"));
             scene = new Scene(pane, pane.getPrefWidth(), pane.getPrefHeight());
             stage.setScene(scene);
             stage.setResizable(false);

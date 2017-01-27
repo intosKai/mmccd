@@ -38,5 +38,5 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-#Libs
-/lib/
+#Compiled jars
+/target/
