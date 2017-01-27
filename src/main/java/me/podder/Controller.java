@@ -1,6 +1,7 @@
 package me.podder;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
@@ -9,9 +10,11 @@ import javafx.scene.paint.Paint;
 import javafx.stage.FileChooser;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
-public class Controller {
+public class Controller implements Initializable {
     @FXML
     private Button btnSetFolder;
     @FXML
@@ -23,10 +26,12 @@ public class Controller {
 
     private FileChooser fileChooser;
     private ConfigEditor cfg;
+    private ResourceBundle resourceBundle;
 
     private String directory;
     @FXML
-    public void initialize() {
+    public void initialize(URL location, ResourceBundle resources) {
+        resourceBundle = resources;
         try {
             lbVersion.setText(Main.VERSION);
             directory = System.getProperty("user.home") + "\\Documents\\Forward Development\\City Car Driving Steam\\config\\";
@@ -71,7 +76,8 @@ public class Controller {
         } catch (IOException e) {
             System.out.println(e.getMessage());
             lbStatus.setTextFill(Paint.valueOf("Red"));
-            lbStatus.setText("STATUS: ERROR!");
+            lbStatus.setText(resourceBundle.getString("status.error"));
         }
     }
+
 }

@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.podder.Controller">
    <children>
-      <Button fx:id="btnSetFolder" disable="true" layoutX="21.0" layoutY="24.0" mnemonicParsing="false" onAction="#onSetFolderAction" prefHeight="25.0" prefWidth="90.0" text="Set folder" />
+      <Button fx:id="btnSetFolder" disable="true" layoutX="21.0" layoutY="24.0" mnemonicParsing="false" onAction="#onSetFolderAction" prefHeight="25.0" prefWidth="90.0" text="%window.setFolder" />
       <CheckBox fx:id="cbMultiMonitors" layoutX="21.0" layoutY="124.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Multi Monitors" />
       <CheckBox fx:id="cbTripleHead" layoutX="21.0" layoutY="100.0" mnemonicParsing="false" text="Triple Head" />
       <Label fx:id="lbStatus" layoutX="387.0" layoutY="28.0" text="STATUS:" textFill="RED" />
@@ -17,7 +17,7 @@
       <Separator layoutY="65.0" prefHeight="17.0" prefWidth="600.0" />
       <Label fx:id="lbPath" alignment="BOTTOM_LEFT" layoutX="1.0" text="path:" />
       <Label layoutX="300.0" layoutY="100.0" text="Current Preset:" />
-      <Button layoutX="126.0" layoutY="24.0" mnemonicParsing="false" onAction="#onSaveAction" text="Save settings" />
+      <Button layoutX="126.0" layoutY="24.0" mnemonicParsing="false" onAction="#onSaveAction" text="%window.save" />
       <Label layoutX="513.0" layoutY="278.0" text="Into Sky devs." />
       <Label fx:id="lbVersion" layoutX="7.0" layoutY="278.0" text="version" />
    </children>

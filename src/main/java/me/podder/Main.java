@@ -6,8 +6,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 public class Main extends Application {
-    public static final String VERSION = "0.0.1 beta";
+    public static final String VERSION = "0.2";
     private Stage stage;
     private Scene scene;
     private AnchorPane pane;
@@ -16,11 +19,14 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         this.stage = primaryStage;
         try {
-            pane = FXMLLoader.load(this.getClass().getClassLoader().getResource("MainWindow.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getClassLoader().getResource("MainWindow.fxml"));
+            fxmlLoader.setResources(ResourceBundle.getBundle("Locale", new Locale("ru")));
+            pane = fxmlLoader.load();
             scene = new Scene(pane, pane.getPrefWidth(), pane.getPrefHeight());
             stage.setScene(scene);
             stage.setResizable(false);
-            stage.setTitle("CCD MultiMonitor " + VERSION);
+            stage.setTitle(fxmlLoader.getResources().getString("window.title")+ " " + VERSION);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
